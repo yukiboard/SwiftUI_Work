@@ -32,11 +32,15 @@ struct ContentView: View {
                     Button(action:{}, label:{
                         Text("Account Create")
                     })
+                    Image("Image")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.blue)
                 }
-                
             }
             .navigationBarTitle("Create Account")
+            .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
         }
+        
     }
 }
 
