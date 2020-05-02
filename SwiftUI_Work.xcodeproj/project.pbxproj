@@ -13,6 +13,7 @@
 		E0699CCC245D3491005A15CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0699CCB245D3491005A15CC /* Assets.xcassets */; };
 		E0699CCF245D3491005A15CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0699CCE245D3491005A15CC /* Preview Assets.xcassets */; };
 		E0699CD2245D3491005A15CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0699CD0245D3491005A15CC /* LaunchScreen.storyboard */; };
+		E0699CDB245D6CB6005A15CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0699CD9245D6CB6005A15CC /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,8 @@
 		E0699CCE245D3491005A15CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E0699CD1245D3491005A15CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0699CD3245D3491005A15CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0699CDA245D6CB6005A15CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0699CDC245D6D42005A15CC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,7 @@
 				E0699CCB245D3491005A15CC /* Assets.xcassets */,
 				E0699CD0245D3491005A15CC /* LaunchScreen.storyboard */,
 				E0699CD3245D3491005A15CC /* Info.plist */,
+				E0699CD9245D6CB6005A15CC /* Localizable.strings */,
 				E0699CCD245D3491005A15CC /* Preview Content */,
 			);
 			path = SwiftUI_Work;
@@ -117,6 +121,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = E0699CB9245D348E005A15CC;
 			productRefGroup = E0699CC3245D348E005A15CC /* Products */;
@@ -134,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0699CD2245D3491005A15CC /* LaunchScreen.storyboard in Resources */,
+				E0699CDB245D6CB6005A15CC /* Localizable.strings in Resources */,
 				E0699CCF245D3491005A15CC /* Preview Assets.xcassets in Resources */,
 				E0699CCC245D3491005A15CC /* Assets.xcassets in Resources */,
 			);
@@ -163,6 +169,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		E0699CD9245D6CB6005A15CC /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E0699CDA245D6CB6005A15CC /* Base */,
+				E0699CDC245D6D42005A15CC /* ja */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -170,6 +185,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -230,6 +246,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

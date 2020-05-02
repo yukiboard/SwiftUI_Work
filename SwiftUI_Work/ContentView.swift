@@ -9,8 +9,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var username : String = ""
+    @State private var Email : String = ""
+    @State private var password : String = ""
+    
     var body: some View {
-        VstackExtraView()
+        
+        //        VstackExtraView()
+//        NavigationFormSampleView()
+        NavigationView {
+            Form {
+                Section(header:HStack{
+                    Image(systemName: "person.crop.circle")
+                    Text("HelloWorld")
+                    
+                }) {
+                    TextField("username", text:$username)
+                    TextField("E-Mail", text:$Email)
+                    SecureField("password", text:$password)
+                }
+                Section(){
+                    Button(action:{}, label:{
+                        Text("Account Create")
+                    })
+                }
+                
+            }
+            .navigationBarTitle("Create Account")
+        }
     }
 }
 
@@ -61,6 +87,46 @@ struct VstackExtraView : View {
             
             Slider(value:$sliderValue)
                 .padding()
+        }
+    }
+}
+
+struct NavigationFormSampleView : View {
+    @State private var textValue : String = ""
+    @State private var secureValue : String = ""
+    @State private var toggleValue : Bool = false
+    @State private var pickerSelectedValue : Int = 0
+    @State private var dateValue = Date()
+    @State private var silderValue : Float = 0.2
+    @State private var stepperValue : Int = 0
+    
+    var body: some View {
+        //        VstackExtraView()
+        NavigationView {
+            Form {
+                Text("Text")
+                TextField("input text Field", text: $textValue)
+                SecureField("input secure field", text:$secureValue)
+                Image(systemName: "trash")
+                Button(action:{}, label:{
+                    Text("Button")
+                })
+                Toggle(isOn:$toggleValue) {
+                    Text("toggle text")
+                }
+                Picker(selection:$pickerSelectedValue,label:Text("Picker Selected")){
+                    Text("Item1").tag(1)
+                    Text("Item2").tag(2)
+                    Text("Item3").tag(3)
+                }
+                DatePicker(selection:$dateValue, label: {
+                    Text("datepicker")
+                })
+                Slider(value: $silderValue)
+                Stepper(value:$stepperValue, in: 0...10){
+                    Text("stepper")
+                }
+            }
         }
     }
 }
