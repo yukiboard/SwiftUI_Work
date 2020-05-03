@@ -9,44 +9,41 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var username : String = ""
-    @State private var Email : String = ""
-    @State private var password : String = ""
+    @ObservedObject var userAccount : UserAccount
     
     var body: some View {
         
         //        VstackExtraView()
-//        NavigationFormSampleView()
-        NavigationView {
-            Form {
-                Section(header:HStack{
-                    Image(systemName: "person.crop.circle")
-                    Text("HelloWorld")
-                    
-                }) {
-                    TextField("username", text:$username)
-                    TextField("E-Mail", text:$Email)
-                    SecureField("password", text:$password)
-                }
-                Section(){
-                    Button(action:{}, label:{
-                        Text("Account Create")
-                    })
-                    Image("Image")
-                        .renderingMode(.template)
-                        .foregroundColor(Color.blue)
-                }
-            }
-            .navigationBarTitle("Create Account")
-            .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
+        //        NavigationFormSampleView()
+        //                Chapter2View()
+        VStack {
+            TextField("userName", text: $userAccount.userName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            TextField("email", text: $userAccount.email)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            SecureField("password", text: $userAccount.password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            // 区切り線
+            Divider()
+            
+            // 入力文字出力
+            Text("input userName : \(self.userAccount.userName)")
+            Text("input email : \(self.userAccount.email)")
+            Text("input password : \(self.userAccount.password)")
+            
         }
+        
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(userAccount: UserAccount())
     }
 }
 
@@ -150,6 +147,38 @@ struct ExtractedView: View {
             }) {
                 Image(systemName:"lock.open")
             }
+        }
+    }
+}
+
+struct Chapter2View : View {
+    @State private var username : String = ""
+    @State private var Email : String = ""
+    @State private var password : String = ""
+    
+    var body: some View {
+        NavigationView {
+            Form {
+                Section(header:HStack{
+                    Image(systemName: "person.crop.circle")
+                    Text("HelloWorld")
+                    
+                }) {
+                    TextField("username", text:$username)
+                    TextField("E-Mail", text:$Email)
+                    SecureField("password", text:$password)
+                }
+                Section(){
+                    Button(action:{}, label:{
+                        Text("Account Create")
+                    })
+                    Image("Image")
+                        .renderingMode(.template)
+                        .foregroundColor(Color.blue)
+                }
+            }
+            .navigationBarTitle("Create Account")
+            .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
         }
     }
 }

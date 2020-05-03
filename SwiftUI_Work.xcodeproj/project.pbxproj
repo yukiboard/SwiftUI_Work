@@ -14,6 +14,7 @@
 		E0699CCF245D3491005A15CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0699CCE245D3491005A15CC /* Preview Assets.xcassets */; };
 		E0699CD2245D3491005A15CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0699CD0245D3491005A15CC /* LaunchScreen.storyboard */; };
 		E0699CDB245D6CB6005A15CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0699CD9245D6CB6005A15CC /* Localizable.strings */; };
+		E0699CE0245E79AF005A15CC /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0699CDF245E79AF005A15CC /* UserAccount.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E0699CD3245D3491005A15CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0699CDA245D6CB6005A15CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0699CDC245D6D42005A15CC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E0699CDF245E79AF005A15CC /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				E0699CC5245D348E005A15CC /* AppDelegate.swift */,
 				E0699CC7245D348E005A15CC /* SceneDelegate.swift */,
 				E0699CC9245D348E005A15CC /* ContentView.swift */,
+				E0699CDF245E79AF005A15CC /* UserAccount.swift */,
 				E0699CCB245D3491005A15CC /* Assets.xcassets */,
 				E0699CD0245D3491005A15CC /* LaunchScreen.storyboard */,
 				E0699CD3245D3491005A15CC /* Info.plist */,
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0699CE0245E79AF005A15CC /* UserAccount.swift in Sources */,
 				E0699CC6245D348E005A15CC /* AppDelegate.swift in Sources */,
 				E0699CC8245D348E005A15CC /* SceneDelegate.swift in Sources */,
 				E0699CCA245D348E005A15CC /* ContentView.swift in Sources */,
