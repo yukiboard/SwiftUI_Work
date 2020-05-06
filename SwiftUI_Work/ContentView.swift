@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @ObservedObject var userAccount : UserAccount
-//    @State private var xValue : Double = 0.0
-//    @State private var yValue : Double = 0.0
-//    @EnvironmentObject var appData : EnvroimentObjectAppData
+    //    @ObservedObject var userAccount : UserAccount
+    //    @State private var xValue : Double = 0.0
+    //    @State private var yValue : Double = 0.0
+    //    @EnvironmentObject var appData : EnvroimentObjectAppData
     
     var body: some View {
         
@@ -21,16 +21,32 @@ struct ContentView: View {
         //                Chapter2View()
         //  ObservedObjectSample(userAccount: UserAccount())
         //  ValueControllerView(x: $xValue, y:$yValue)
-        chapter3View()
-        
+        //        chapter3View()
+        NavigationView {
+//            Text("Navigation View Title").navigationBarTitle("Home", displayMode: .inline)
+            VStack {
+                NavigationLink(destination:MySubView(prefix:"Sample1", index:0, childViewIndex: 3)){
+                    Text("Test1")
+                }
+                
+                NavigationLink(destination:MySubView(prefix:"Sample2", index:1, childViewIndex: 3)){
+                    Text("Test2")
+                }
+                
+                NavigationLink(destination:MySubView(prefix:"Sample3", index:0, childViewIndex: 3)){
+                    Text("Test3")
+                }
+            }
+            .navigationBarTitle("Home", displayMode: .inline)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-//        ContentView(userAccount: UserAccount())
+        //        ContentView(userAccount: UserAccount())
         // ライブプレビュー用のオブジェクト設定
-//        ContentView().environmentObject(EnvroimentObjectAppData())
+        //        ContentView().environmentObject(EnvroimentObjectAppData())
         ContentView()
     }
 }
@@ -232,6 +248,6 @@ struct ColorSelectView : View {
                 Text("Blue").foregroundColor(Color.blue)
             })
         }
-    .padding()
+        .padding()
     }
 }

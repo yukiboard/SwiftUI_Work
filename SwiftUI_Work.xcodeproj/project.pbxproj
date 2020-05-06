@@ -18,6 +18,7 @@
 		E073D4E5246298C000E8228C /* ValueControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E4246298C000E8228C /* ValueControllerView.swift */; };
 		E073D4E724629C5900E8228C /* EnvroientObjectSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E624629C5900E8228C /* EnvroientObjectSampleModel.swift */; };
 		E073D4E92462D3E000E8228C /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E82462D3E000E8228C /* TextMessageView.swift */; };
+		E073D4EB2462DE7500E8228C /* MySubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4EA2462DE7500E8228C /* MySubView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E073D4E4246298C000E8228C /* ValueControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueControllerView.swift; sourceTree = "<group>"; };
 		E073D4E624629C5900E8228C /* EnvroientObjectSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvroientObjectSampleModel.swift; sourceTree = "<group>"; };
 		E073D4E82462D3E000E8228C /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
+		E073D4EA2462DE7500E8228C /* MySubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySubView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				E0699CC5245D348E005A15CC /* AppDelegate.swift */,
 				E0699CC7245D348E005A15CC /* SceneDelegate.swift */,
 				E0699CC9245D348E005A15CC /* ContentView.swift */,
+				E073D4EA2462DE7500E8228C /* MySubView.swift */,
 				E073D4E82462D3E000E8228C /* TextMessageView.swift */,
 				E073D4E4246298C000E8228C /* ValueControllerView.swift */,
 				E0699CDF245E79AF005A15CC /* UserAccount.swift */,
@@ -169,6 +172,7 @@
 				E0699CE0245E79AF005A15CC /* UserAccount.swift in Sources */,
 				E0699CC6245D348E005A15CC /* AppDelegate.swift in Sources */,
 				E073D4E5246298C000E8228C /* ValueControllerView.swift in Sources */,
+				E073D4EB2462DE7500E8228C /* MySubView.swift in Sources */,
 				E0699CC8245D348E005A15CC /* SceneDelegate.swift in Sources */,
 				E0699CCA245D348E005A15CC /* ContentView.swift in Sources */,
 			);
