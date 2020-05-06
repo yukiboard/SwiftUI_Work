@@ -16,6 +16,8 @@
 		E0699CDB245D6CB6005A15CC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E0699CD9245D6CB6005A15CC /* Localizable.strings */; };
 		E0699CE0245E79AF005A15CC /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0699CDF245E79AF005A15CC /* UserAccount.swift */; };
 		E073D4E5246298C000E8228C /* ValueControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E4246298C000E8228C /* ValueControllerView.swift */; };
+		E073D4E724629C5900E8228C /* EnvroientObjectSampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E624629C5900E8228C /* EnvroientObjectSampleModel.swift */; };
+		E073D4E92462D3E000E8228C /* TextMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E073D4E82462D3E000E8228C /* TextMessageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,8 @@
 		E0699CDC245D6D42005A15CC /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E0699CDF245E79AF005A15CC /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
 		E073D4E4246298C000E8228C /* ValueControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueControllerView.swift; sourceTree = "<group>"; };
+		E073D4E624629C5900E8228C /* EnvroientObjectSampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvroientObjectSampleModel.swift; sourceTree = "<group>"; };
+		E073D4E82462D3E000E8228C /* TextMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,7 @@
 				E0699CC5245D348E005A15CC /* AppDelegate.swift */,
 				E0699CC7245D348E005A15CC /* SceneDelegate.swift */,
 				E0699CC9245D348E005A15CC /* ContentView.swift */,
+				E073D4E82462D3E000E8228C /* TextMessageView.swift */,
 				E073D4E4246298C000E8228C /* ValueControllerView.swift */,
 				E0699CDF245E79AF005A15CC /* UserAccount.swift */,
 				E0699CCB245D3491005A15CC /* Assets.xcassets */,
@@ -73,6 +78,7 @@
 				E0699CD3245D3491005A15CC /* Info.plist */,
 				E0699CD9245D6CB6005A15CC /* Localizable.strings */,
 				E0699CCD245D3491005A15CC /* Preview Content */,
+				E073D4E624629C5900E8228C /* EnvroientObjectSampleModel.swift */,
 			);
 			path = SwiftUI_Work;
 			sourceTree = "<group>";
@@ -158,6 +164,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E073D4E92462D3E000E8228C /* TextMessageView.swift in Sources */,
+				E073D4E724629C5900E8228C /* EnvroientObjectSampleModel.swift in Sources */,
 				E0699CE0245E79AF005A15CC /* UserAccount.swift in Sources */,
 				E0699CC6245D348E005A15CC /* AppDelegate.swift in Sources */,
 				E073D4E5246298C000E8228C /* ValueControllerView.swift in Sources */,

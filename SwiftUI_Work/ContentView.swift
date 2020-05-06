@@ -9,24 +9,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var userAccount : UserAccount
-    @State private var xValue : Double = 0.0
-    @State private var yValue : Double = 0.0
+//    @ObservedObject var userAccount : UserAccount
+//    @State private var xValue : Double = 0.0
+//    @State private var yValue : Double = 0.0
+    @EnvironmentObject var appData : EnvroimentObjectAppData
+    
     var body: some View {
         
         //        VstackExtraView()
         //                NavigationFormSampleView()
         //                Chapter2View()
         //  ObservedObjectSample(userAccount: UserAccount())
-        ValueControllerView(x: $xValue, y:$yValue)
-        
-        
+        //  ValueControllerView(x: $xValue, y:$yValue)
+        VStack{
+            ColorSelectView()
+            TextMessageView()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(userAccount: UserAccount())
+//        ContentView(userAccount: UserAccount())
+        // ライブプレビュー用のオブジェクト設定
+        ContentView().environmentObject(EnvroimentObjectAppData())
     }
 }
 
@@ -190,5 +196,32 @@ struct ObservedObjectSample : View {
             
         }
         
+    }
+}
+
+struct ColorSelectView : View {
+    @EnvironmentObject var appData : EnvroimentObjectAppData
+    
+    var body: some View {
+        HStack{
+            Button(action:{
+                self.appData.favalidColor = Color.black
+            }, label : {
+                Text("Black").foregroundColor(Color.black)
+            })
+            
+            Button(action : {
+                self.appData.favalidColor = Color.red
+            }, label:{
+                Text("Red").foregroundColor(Color.red)
+            })
+            
+            Button(action:{
+                self.appData.favalidColor = Color.blue
+            }, label : {
+                Text("Blue").foregroundColor(Color.blue)
+            })
+        }
+    .padding()
     }
 }
