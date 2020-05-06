@@ -14,28 +14,9 @@ struct ContentView: View {
     var body: some View {
         
         //        VstackExtraView()
-        //        NavigationFormSampleView()
+        //                NavigationFormSampleView()
         //                Chapter2View()
-        VStack {
-            TextField("userName", text: $userAccount.userName)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            TextField("email", text: $userAccount.email)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            SecureField("password", text: $userAccount.password)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-                .padding()
-            
-            // 区切り線
-            Divider()
-            
-            // 入力文字出力
-            Text("input userName : \(self.userAccount.userName)")
-            Text("input email : \(self.userAccount.email)")
-            Text("input password : \(self.userAccount.password)")
-            
-        }
+        ObservedObjectSample(userAccount: UserAccount())
         
         
     }
@@ -180,5 +161,32 @@ struct Chapter2View : View {
             .navigationBarTitle("Create Account")
             .background(/*@START_MENU_TOKEN@*/Color.blue/*@END_MENU_TOKEN@*/)
         }
+    }
+}
+
+struct ObservedObjectSample : View {
+    @ObservedObject var userAccount : UserAccount
+    var body: some View {
+        VStack {
+            TextField("userName", text: $userAccount.userName)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            TextField("email", text: $userAccount.email)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            SecureField("password", text: $userAccount.password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+            
+            // 区切り線
+            Divider()
+            
+            // 入力文字出力
+            Text("input userName : \(self.userAccount.userName)")
+            Text("input email : \(self.userAccount.email)")
+            Text("input password : \(self.userAccount.password)")
+            
+        }
+        
     }
 }
