@@ -10,13 +10,15 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var userAccount : UserAccount
-    
+    @State private var xValue : Double = 0.0
+    @State private var yValue : Double = 0.0
     var body: some View {
         
         //        VstackExtraView()
         //                NavigationFormSampleView()
         //                Chapter2View()
-        ObservedObjectSample(userAccount: UserAccount())
+        //  ObservedObjectSample(userAccount: UserAccount())
+        ValueControllerView(x: $xValue, y:$yValue)
         
         
     }
