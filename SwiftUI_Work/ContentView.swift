@@ -12,7 +12,7 @@ struct ContentView: View {
 //    @ObservedObject var userAccount : UserAccount
 //    @State private var xValue : Double = 0.0
 //    @State private var yValue : Double = 0.0
-    @EnvironmentObject var appData : EnvroimentObjectAppData
+//    @EnvironmentObject var appData : EnvroimentObjectAppData
     
     var body: some View {
         
@@ -21,10 +21,8 @@ struct ContentView: View {
         //                Chapter2View()
         //  ObservedObjectSample(userAccount: UserAccount())
         //  ValueControllerView(x: $xValue, y:$yValue)
-        VStack{
-            ColorSelectView()
-            TextMessageView()
-        }
+        chapter3View()
+        
     }
 }
 
@@ -32,7 +30,8 @@ struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
 //        ContentView(userAccount: UserAccount())
         // ライブプレビュー用のオブジェクト設定
-        ContentView().environmentObject(EnvroimentObjectAppData())
+//        ContentView().environmentObject(EnvroimentObjectAppData())
+        ContentView()
     }
 }
 
@@ -196,6 +195,17 @@ struct ObservedObjectSample : View {
             
         }
         
+    }
+}
+
+struct chapter3View : View {
+    @EnvironmentObject var appData : EnvroimentObjectAppData
+    
+    var body: some View{
+        VStack{
+            ColorSelectView()
+            TextMessageView()
+        }
     }
 }
 
