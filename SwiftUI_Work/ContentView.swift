@@ -22,23 +22,8 @@ struct ContentView: View {
         //  ObservedObjectSample(userAccount: UserAccount())
         //  ValueControllerView(x: $xValue, y:$yValue)
         //        chapter3View()
-        NavigationView {
-//            Text("Navigation View Title").navigationBarTitle("Home", displayMode: .inline)
-            VStack {
-                NavigationLink(destination:MySubView(prefix:"Sample1", index:0, childViewIndex: 3)){
-                    Text("Test1")
-                }
-                
-                NavigationLink(destination:MySubView(prefix:"Sample2", index:1, childViewIndex: 3)){
-                    Text("Test2")
-                }
-                
-                NavigationLink(destination:MySubView(prefix:"Sample3", index:0, childViewIndex: 3)){
-                    Text("Test3")
-                }
-            }
-            .navigationBarTitle("Home", displayMode: .inline)
-        }
+//        NavigationLinkSample()
+        TabViewSample()
     }
 }
 
@@ -249,5 +234,52 @@ struct ColorSelectView : View {
             })
         }
         .padding()
+    }
+}
+
+struct NavigationLinkSample : View {
+    var body: some View {
+        NavigationView {
+            //            Text("Navigation View Title").navigationBarTitle("Home", displayMode: .inline)
+            VStack {
+                NavigationLink(destination:MySubView(prefix:"Sample1", index:0, childViewIndex: 3)){
+                    Text("Test1")
+                }
+                
+                NavigationLink(destination:MySubView(prefix:"Sample2", index:1, childViewIndex: 3)){
+                    Text("Test2")
+                }
+                
+                NavigationLink(destination:MySubView(prefix:"Sample3", index:0, childViewIndex: 3)){
+                    Text("Test3")
+                }
+            }
+            .navigationBarTitle("Home", displayMode: .inline)
+        }
+    }
+}
+
+struct TabViewSample : View {
+    var body: some View {
+        TabView{
+            ItemView(imageName: "Image").tabItem{
+                Image(systemName: "photo")
+                Text("Image1")
+            }
+            .edgesIgnoringSafeArea(.top)
+            
+            ItemView(imageName: "Image2").tabItem{
+                Image(systemName: "photo")
+                Text("Image2")
+            }
+            .edgesIgnoringSafeArea(.top)
+            
+            ItemView(imageName: "Image3").tabItem{
+                Image(systemName: "photo")
+                Text("Image3")
+            }
+            .edgesIgnoringSafeArea(.top)
+        }
+        
     }
 }
